@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Valentine ❤️</title>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #2c003e, #ff758c);
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+      color: white;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(8px);
+      padding: 30px;
+      border-radius: 25px;
+      width: 90%;
+      max-width: 430px;
+    }
+
+    .photos {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .photos img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid white;
+    }
+
+    h1 {
+      font-size: 1.6em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.05em;
+      line-height: 1.6;
+      white-space: pre-line;
+    }
+
+    .buttons {
+      margin-top: 25px;
+      position: relative;
+      height: 70px;
+    }
+
+    button {
+      padding: 12px 28px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    #yes {
+      background: #28a745;
+      color: white;
+    }
+
+    #no {
+      background: #dc3545;
+      color: white;
+      position: absolute;
+      left: 160px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Music (solemn romantic piano) -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_2f6c9b3a1f.mp3?filename=romantic-piano-112191.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="card">
+
+    <div class="photos">
+      <img src="akala1.jpg" alt="Akala photo 1">
+      <img src="akala2.jpg" alt="Akala photo 2">
+    </div>
+
+    <h1>Akala Deborah Oluwatosin ❤️</h1>
+
+    <p>
+Honestly… meeting you was unexpected.  
+When we first crossed paths, I didn’t even think this could work.  
+But somehow, against all odds, it’s been perfect.<br><br>
+
+We’ve had our fights.  
+We’ve had our issues.  
+But one thing never changed — we always chose each other.  
+Every single time.<br><br>
+
+No matter how tough it got, we found our way back,  
+because our love is bigger than the problems.<br><br>
+
+We’ve grown together.  
+We’ve planned together.  
+And I’m so proud of where we are today  
+and how far we’ve come.<br><br>
+
+You love me deeply — I feel it every day.  
+And I love you with everything I have.<br><br>
+
+I hope we keep getting better, stronger,  
+and happier… together.  
+Because you’re my person.<br><br>
+
+I love you so very much ❤️  
+And from the depth of my heart —  
+would you be my Val? 💌
+    </p>
+
+    <div class="buttons">
+      <button id="yes" onclick="yesClicked()">Yes 💖</button>
+      <button id="no">No 💔</button>
+    </div>
+
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("no");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * (window.innerWidth - 120);
+      const y = Math.random() * (window.innerHeight - 120);
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    });
+
+    function yesClicked() {
+      document.body.innerHTML = `
+        <div style="text-align:center; color:white;">
+          <h1>Happy Valentine’s Day, My Love 💘</h1>
+          <p>
+            You chose me, and I’ll never take that lightly.<br>
+            I promise to love you with patience, respect,<br>
+            and a heart that chooses you every single day.<br><br>
+            I can’t wait for all the memories we’re yet to make.<br>
+            I love you endlessly. ❤️
+          </p>
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>
